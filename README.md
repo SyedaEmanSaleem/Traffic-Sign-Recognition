@@ -3,15 +3,15 @@
 ## **Overview**
 
 Traffic Sign Recognition using **Convolutional Neural Networks (CNN)** on the **GTSRB dataset**.
-This project classifies traffic signs in images, evaluates model performance, and visualizes predictions with images and video.
+The project classifies German traffic signs in images, evaluates model performance, and visualizes predictions with images and video.
 
 ---
 
 ## **Features**
 
 * Preprocessing: resizing, normalization, one-hot encoding
-* CNN model with 3 convolutional blocks, Batch Normalization, and Dropout
-* Callbacks: EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
+* CNN model with **3 convolutional blocks**, Batch Normalization, and Dropout
+* Callbacks: **EarlyStopping**, **ModelCheckpoint**, **ReduceLROnPlateau**
 * Evaluation: accuracy, loss, confusion matrix, classification report
 * Visualization: training curves, random/misclassified test images
 * Video demonstration of predictions
@@ -33,6 +33,9 @@ This project classifies traffic signs in images, evaluates model performance, an
 git clone https://github.com/yourusername/traffic-sign-recognition.git
 pip install -r requirements.txt
 ```
+
+*(Main packages: TensorFlow, OpenCV, NumPy, Pandas, Matplotlib, Seaborn, KaggleHub)*
+
 ---
 
 ## **Usage**
@@ -50,10 +53,20 @@ pip install -r requirements.txt
 
 ---
 
-## **Results**
+## **Training Results**
+
+* **Training Accuracy:** 99.37%
+* **Validation Accuracy:** 98.08%
+* **Best model saved at:** Epoch 13 (`best_model.h5`)
+* **Early stopping** triggered at Epoch 18
+* **ReduceLROnPlateau** successfully lowered learning rate when validation plateaued
+
+---
+
+## **Visualizations**
 
 * Training & validation accuracy/loss plots
-* Confusion matrix for evaluation of all 43 classes
+* Confusion matrix of predictions
 * Random and misclassified test image visualizations
 * Video animation of model predictions
 
@@ -70,10 +83,10 @@ pip install -r requirements.txt
 
 ## **Future Improvements**
 
-* Use **transfer learning** (ResNet, MobileNet) for better accuracy
+* Apply **transfer learning** (ResNet, MobileNet) for better accuracy
 * Real-time traffic sign recognition via **webcam or video stream**
 * Deploy as a **web app** with Streamlit/Gradio or **mobile app** using TensorFlow Lite
-* Apply **Grad-CAM** to visualize model focus areas
+* Use **Grad-CAM** for model interpretability
 
 ---
 
